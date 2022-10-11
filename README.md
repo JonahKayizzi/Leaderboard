@@ -28,7 +28,7 @@ run the following commands in your terminal
 - cd Leaderboard/
 - git checkout dev
 
-# Local deployment
+### Local deployment
 
 - npm run build - To build the application locally
 - npm run start - To run the application locally
