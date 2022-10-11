@@ -7,6 +7,7 @@ The Leaderboard App displays scores submitted by different players, allows you t
 
 - HTML & CSS
 - JavaScript
+- Linters
 - ES6
 - npm
 - webpack
@@ -32,6 +33,7 @@ run the following commands in your terminal
 
 - npm run build - To build the application locally
 - npm run start - To run the application locally
+- Run the brower via localhost:8080
 
 ## Author
 
