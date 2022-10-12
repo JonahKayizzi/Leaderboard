@@ -5,19 +5,13 @@ const playerScores = gameScores.GET();
 const scoresContainer = document.querySelector('.scores-list');
 export default () => {
   scoresContainer.innerHTML = '';
-  playerScores.forEach((score, i) => {
-    let scoreClass = '';
-    if (i % 2 === 0) {
-      scoreClass = 'player-score-even';
-    } else {
-      scoreClass = 'player-score-odd';
-    }
+  playerScores.forEach((score) => {
     createHTMLElement(
       'li',
-      `${scoreClass}`,
+      'play-score',
       'player-score',
       `${score.player}: ${score.score}`,
-      scoresContainer
+      scoresContainer,
     );
   });
 };
