@@ -15,7 +15,6 @@ window.onload = () => {
     const playerName = document.querySelector('.player-name');
     const theScore = document.querySelector('.player-score');
     postScoresToAPI(playerName.value, theScore.value, gameID);
-    populateScores();
   });
 
   refreshButton.addEventListener('click', (e) => {

@@ -16,6 +16,7 @@ export default () => {
 
   yy.then((resolve) => {
     localStorage.setItem('storedGame', resolve.result.split(' ')[3]);
+    console.log(resolve.result.split(' ')[3]);
     return resolve.result.split(' ')[3];
   });
 };
