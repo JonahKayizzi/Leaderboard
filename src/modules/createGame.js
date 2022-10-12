@@ -15,8 +15,7 @@ export default () => {
   const yy = xx.then((result) => result.json());
 
   yy.then((resolve) => {
-    console.log('This is result');
-    console.log(resolve.result.split(' ')[3]);
     localStorage.setItem('storedGame', resolve.result.split(' ')[3]);
+    return resolve.result.split(' ')[3];
   });
 };
