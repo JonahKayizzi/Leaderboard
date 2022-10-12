@@ -11,6 +11,6 @@ export default async (playerName, playerScore, gameID) => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(data),
-    }
+    },
   );
 };

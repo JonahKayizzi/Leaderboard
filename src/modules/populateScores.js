@@ -5,7 +5,7 @@ export default async () => {
   if (gameID) {
     const scoresContainer = document.querySelector('.scores-list');
     const response = await fetch(
-      `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${gameID}/scores/`
+      `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${gameID}/scores/`,
     );
     const result = await response.json();
     scoresContainer.innerHTML = '';
@@ -15,7 +15,7 @@ export default async () => {
         'play-score',
         'player-score',
         `${score.user}: ${score.score}`,
-        scoresContainer
+        scoresContainer,
       );
     });
   }

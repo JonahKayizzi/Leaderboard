@@ -8,7 +8,7 @@ export default async () => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(data),
-    }
+    },
   );
   const result = await response.json();
   localStorage.setItem('storedGame', result.result.split(' ')[3]);
