@@ -12,6 +12,7 @@ The Leaderboard App displays scores submitted by different players, allows you t
 - npm
 - webpack
 - APIs & JS Async
+- JSON
 
 ## Live Demo
 

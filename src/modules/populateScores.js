@@ -1,17 +1,22 @@
 import createHTMLElement from './createHTMLelement.js';
-import gameScores from './scores.js';
 
-const playerScores = gameScores.GET();
-const scoresContainer = document.querySelector('.scores-list');
-export default () => {
-  scoresContainer.innerHTML = '';
-  playerScores.forEach((score) => {
-    createHTMLElement(
-      'li',
-      'play-score',
-      'player-score',
-      `${score.player}: ${score.score}`,
-      scoresContainer,
+export default async () => {
+  const gameID = localStorage.getItem('storedGame');
+  if (gameID) {
+    const scoresContainer = document.querySelector('.scores-list');
+    const response = await fetch(
+      `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${gameID}/scores/`,
     );
-  });
+    const result = await response.json();
+    scoresContainer.innerHTML = '';
+    result.result.forEach((score) => {
+      createHTMLElement(
+        'li',
+        'play-score',
+        'player-score',
+        `${score.user}: ${score.score}`,
+        scoresContainer,
+      );
+    });
+  }
 };

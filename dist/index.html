@@ -14,7 +14,7 @@
         <div class="scores-container">
             <div class="scoretitle-container">
                 <h2 class="score-title">Recent scores</h2>
-                <button class="refresh-button">Refresh</button>
+                <button type="submit" class="refresh-button">Refresh</button>
             </div>
             <ul class="scores-list">
     
@@ -23,9 +23,9 @@
         <div class="form-container">
             <h2 class="form-title">Add your score</h2>
             <form class="flex-col" action="#">
-                <input class="player-name" type="text" name="name" id="player-name" placeholder="Your name">
-                <input class="player-score" type="text" id="player-score" placeholder="Your score">
-                <button class="submit-button">Submit</button>
+                <input class="player-name" type="text" name="name" id="player-name" placeholder="Your name" required>
+                <input class="player-score" type="number" id="player-score" placeholder="Your score" required>
+                <button type="submit" class="submit-button">Submit</button>
             </form>
         </div>
     </div>
