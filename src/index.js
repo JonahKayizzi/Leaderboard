@@ -8,12 +8,14 @@ window.onload = () => {
   const refreshButton = document.querySelector('.refresh-button');
   populateScores();
 
-  const gameID = localStorage.getItem('storedGame') || createNewGame();
-  console.log(gameID);
+  if (!localStorage.getItem('storedGame')) {
+    createNewGame();
+  }
   addScore.addEventListener('click', (e) => {
     e.preventDefault();
     const playerName = document.querySelector('.player-name');
     const theScore = document.querySelector('.player-score');
+    const gameID = localStorage.getItem('storedGame');
     postScoresToAPI(playerName.value, theScore.value, gameID);
   });
 

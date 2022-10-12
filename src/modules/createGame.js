@@ -1,5 +1,4 @@
 const data = { name: 'Game JS' };
-
 export default async () => {
   const response = await fetch(
     'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/',
