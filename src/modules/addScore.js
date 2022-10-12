@@ -1,13 +1,12 @@
-export default (playerName, playerScore, gameID) => {
+export default async (playerName, playerScore, gameID) => {
   const data = {
     user: playerName,
     score: playerScore,
   };
-
-  fetch(
+  await fetch(
     `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${gameID}/scores/`,
     {
-      method: 'POST', // or 'PUT'
+      method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
