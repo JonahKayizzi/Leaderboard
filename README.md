@@ -16,7 +16,7 @@ The Leaderboard App displays scores submitted by different players, allows you t
 
 ## Live Demo
 
-[Live Demo Link](https://jonahkayizzi.github.io/Leaderboard/)
+[Live Demo Link](https://jonahkayizzi.github.io/Leaderboard/dist/)
 
 ## Getting Started
 
